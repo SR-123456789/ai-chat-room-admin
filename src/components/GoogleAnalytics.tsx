@@ -20,7 +20,7 @@ const GoogleAnalytics = () => {
            function gtag(){dataLayer.push(arguments);}
            gtag('js', new Date());
  
-           gtag('config', '${IS_GATAG}');
+           gtag('config', 'G-6K0S02QDED');
            `,
         }}
       />
