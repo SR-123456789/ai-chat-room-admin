@@ -2,7 +2,7 @@
 "use client";
 
 import Script from "next/script";
-import { IS_GATAG } from "../../libs/gtag";
+// import { IS_GATAG } from "../../libs/gtag";
 
 const GoogleAnalytics = () => {
   return (
