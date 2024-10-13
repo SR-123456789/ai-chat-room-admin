@@ -1,38 +1,29 @@
+// components/GoogleAnalytics.tsx
 "use client";
 
-import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
-import { useEffect } from "react";
-import { IS_GATAG, GA_TAG_ID, pageview } from "@/../libs/gtag";
+import { IS_GATAG } from "../../libs/gtag";
 
 const GoogleAnalytics = () => {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  useEffect(() => {
-    if (!IS_GATAG) {
-      return
-    }
-    const url = pathname + searchParams.toString()
-    pageview(url)
-  }, [pathname, searchParams])
-
   return (
     <>
       <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TAG_ID}`}
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-6K0S02QDED"
+      ></Script>
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+           window.dataLayer = window.dataLayer || [];
+           function gtag(){dataLayer.push(arguments);}
+           gtag('js', new Date());
+ 
+           gtag('config', '${IS_GATAG}');
+           `,
+        }}
       />
-      <Script id="gtag-init" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${GA_TAG_ID}', {
-            page_path: window.location.pathname,
-          });
-        `}
-      </Script>
     </>
   );
 };

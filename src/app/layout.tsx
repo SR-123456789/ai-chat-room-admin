@@ -35,9 +35,9 @@ export default function RootLayout({
     <html lang="ja">
       <head>
         <link rel="icon" href="/favicon.png" />
-        <GoogleAnalytics/>
       </head>
       <body className="bg-[#212121] min-h-screen flex flex-col">
+      <GoogleAnalytics/>
         <header className="bg-[#171717] text-[#b4b4b4] py-4 fixed w-full z-50 flex">
           <img
             src="/favicon-white.png"
