@@ -22,7 +22,6 @@ export default function HomePage() {
   const [searchTerm, setSearchTerm] = useState(""); // 検索用
   const [isShowModal, setIsShowModal] = useState(false); // モーダルの表示管理
 
-  const [lastScrollY, setLastScrollY] = useState(0); // 最後のスクロール位置
   const [addErrorMessages, setAddErrorMessages] = useState<string>(); // エラーメッセージ
 
   // localStorageからルームデータを読み込む
@@ -176,7 +175,7 @@ export default function HomePage() {
         </div>
       ) : (
         <div className="pt-4 sticky top-16 mb-14 left-0 bg-[#212121] z-10">
-          <div className={`mt-3 bg-[#2f2f2f] rounded-xl`}>
+          <div className={"mt-3 bg-[#2f2f2f] rounded-xl"}>
             <input
               type="text"
               className=" rounded-md p-2 w-full text-[#e8e8e8] bg-[#2f2f2f]"
@@ -314,12 +313,12 @@ export default function HomePage() {
                     />
                     <div className="flex justify-end space-x-2 mt-4">
                       <div className="grow">
-                      <button
-                        className=" text-red-500 py-1 px-3 rounded-md"
-                        onClick={() => deleteRoom(index)}
-                      >
-                        削除
-                      </button>
+                        <button
+                          className=" text-red-500 py-1 px-3 rounded-md"
+                          onClick={() => deleteRoom(index)}
+                        >
+                          削除
+                        </button>
                       </div>
                       <button
                         className="text-[#f8f8f8] py-1 px-3 rounded-md"

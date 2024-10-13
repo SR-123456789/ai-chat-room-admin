@@ -1,22 +1,12 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
+import Image from "next/image";
 import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata = {
   title: "AIチャットルーム管理 - ChatGPTなどのAIチャットルーム管理アプリ",
-  description: "AIチャットルーム管理は、ChatGPTなどのルームを整理・管理するための便利なアプリです。シンプルで使いやすいインターフェースでルームを簡単に管理。",
-  keywords: "ChatGPT, ルーム管理, セッション,セッション管理,AIチャット, ルーム整理, AI,",
+  description:
+    "AIチャットルーム管理は、ChatGPTなどのルームを整理・管理するための便利なアプリです。シンプルで使いやすいインターフェースでルームを簡単に管理。",
+  keywords:
+    "ChatGPT, ルーム管理, セッション,セッション管理,AIチャット, ルーム整理, AI,",
   robots: "index, follow",
   author: "あなたの名前または会社名",
   openGraph: {
@@ -35,7 +25,6 @@ export const metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: {
@@ -44,11 +33,17 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
-        <link rel="icon" href="/favicon.png"/>
+        <link rel="icon" href="/favicon.png" />
       </head>
       <body className="bg-[#212121] min-h-screen flex flex-col">
         <header className="bg-[#171717] text-[#b4b4b4] py-4 fixed w-full z-50 flex">
-          <img src="/favicon-white.png" alt="AIチャットルーム管理" className="h-8 mx-8" />
+          <Image
+            src="/favicon-white.png"
+            alt="AIチャットルーム管理"
+            width={32}
+            height={32}
+            className="h-8 mx-8"
+          />
           <nav className="container">
             <h1 className="text-2xl font-bold">AIチャットルーム管理</h1>
           </nav>
