@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "sitemap": "next-sitemap",
-    "export": "next build && next export"
+    "sitemap": "next-sitemap"
   },
   "dependencies": {
     "next": "14.2.15",

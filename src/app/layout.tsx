@@ -9,6 +9,7 @@ export const metadata = {
     "ChatGPT, ルーム管理, セッション,セッション管理,AIチャット, ルーム整理, AI,",
   robots: "index, follow",
   author: "あなたの名前または会社名",
+  metadataBase: new URL('https://your-domain.com'),  // 本番環境のURLを指定
   openGraph: {
     title: "AIチャットルーム管理",
     description: "AIのチャットルームを効率的に管理できるアプリ",
