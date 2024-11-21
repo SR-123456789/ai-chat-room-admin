@@ -28,7 +28,10 @@ export default function HomePage() {
   useEffect(() => {
     const storedRooms = localStorage.getItem("chatRooms");
     if (storedRooms) {
-      setRooms(JSON.parse(storedRooms));
+      setRooms([...JSON.parse(storedRooms)].sort(
+        (a, b) =>
+          new Date(b.lastUsed).getTime() - new Date(a.lastUsed).getTime()
+      ));
     }
   }, []);
 
@@ -246,7 +249,7 @@ export default function HomePage() {
           </h3>
           <button
             onClick={() => setIsShowModal(true)}
-            className="text-black text-xl font-semibold"
+            className="text-black hover:bg-[#2f2f2f] mb-2 h-9 p-2 rounded-lg text-xl font-semibold"
           >
             <h3 className="text-sm font-semibold mb-2 text-[#e8e8e8] sticky">
               新しいルームを追加 +

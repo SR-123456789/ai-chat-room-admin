@@ -34,6 +34,28 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
+      <title>AIチャットルーム管理 - ChatGPTなどのAIチャットルーム管理アプリ</title>
+        <meta
+          name="description"
+          content="AIチャットルーム管理は、ChatGPTなどのルームを整理・管理するための便利なアプリです。シンプルで使いやすいインターフェースでルームを簡単に管理。"
+        />
+        <meta
+          name="keywords"
+          content="ChatGPT, ルーム管理, セッション,セッション管理,AIチャット, ルーム整理, AI"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="あなたの名前または会社名" />
+        <meta property="og:title" content="AIチャットルーム管理" />
+        <meta
+          property="og:description"
+          content="AIのチャットルームを効率的に管理できるアプリ"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://your-domain.com" />
+        <meta
+          property="og:image"
+          content="https://your-domain.com/favicon.png"
+        />
         <link rel="icon" href="/favicon.png" />
       </head>
       <GoogleAnalytics/>
