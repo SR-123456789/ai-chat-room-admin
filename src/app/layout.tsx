@@ -2,19 +2,19 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import "./globals.css";
 
 export const metadata = {
-  title: "AIチャットルーム管理 - ChatGPTなどのAIチャットルーム管理アプリ",
+  title: "[ChatGPT]のチャットルームを整理ができる-AIChatRoom管理",
   description:
     "AIチャットルーム管理は、ChatGPTなどのルームを整理・管理するための便利なアプリです。シンプルで使いやすいインターフェースでルームを簡単に管理。",
   keywords:
     "ChatGPT, ルーム管理, セッション,セッション管理,AIチャット, ルーム整理, AI,",
   robots: "index, follow",
-  author: "あなたの名前または会社名",
-  metadataBase: new URL('https://your-domain.com'),  // 本番環境のURLを指定
+  author: "プレパレイシャン",
+  metadataBase: new URL('https://ai-chatroom-session-management.netlify.app/'),  // 本番環境のURLを指定
   openGraph: {
     title: "AIチャットルーム管理",
-    description: "AIのチャットルームを効率的に管理できるアプリ",
+    description: "ChatGPTのチャットルームを効率的に管理できるアプリ",
     type: "website",
-    url: "https://your-domain.com",
+    url: "https://ai-chatroom-session-management.netlify.app/",
     images: [
       {
         url: "/favicon.png",
@@ -34,28 +34,17 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
-      <title>AIチャットルーム管理 - ChatGPTなどのAIチャットルーム管理アプリ</title>
-        <meta
-          name="description"
-          content="AIチャットルーム管理は、ChatGPTなどのルームを整理・管理するための便利なアプリです。シンプルで使いやすいインターフェースでルームを簡単に管理。"
-        />
-        <meta
-          name="keywords"
-          content="ChatGPT, ルーム管理, セッション,セッション管理,AIチャット, ルーム整理, AI"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="あなたの名前または会社名" />
-        <meta property="og:title" content="AIチャットルーム管理" />
-        <meta
-          property="og:description"
-          content="AIのチャットルームを効率的に管理できるアプリ"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://your-domain.com" />
-        <meta
-          property="og:image"
-          content="https://your-domain.com/favicon.png"
-        />
+      <title>{metadata.title}</title>
+        <meta name="title" content={metadata.title} />
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="robots" content={metadata.robots} />
+        <meta name="author" content={metadata.author} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
         <link rel="icon" href="/favicon.png" />
       </head>
       <GoogleAnalytics/>
