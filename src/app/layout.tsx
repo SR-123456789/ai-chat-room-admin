@@ -46,6 +46,7 @@ export default function RootLayout({
         <meta property="og:url" content={metadata.openGraph.url} />
         <meta property="og:image" content={metadata.openGraph.images[0].url} />
         <link rel="icon" href="/favicon.png" />
+        <meta name="google-site-verification" content="VIF2tLciXP2vJp6fTmRnS0idvtB4_ERucHR8XblhW6I" />
       </head>
       <GoogleAnalytics/>
       <body className="bg-[#212121] min-h-screen flex flex-col">
